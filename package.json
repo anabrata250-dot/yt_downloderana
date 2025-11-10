@@ -1,0 +1,12 @@
+{
+  "name": "video-downloader",
+  "version": "1.0.0",
+  "description": "Video Downloader Website",
+  "dependencies": {
+    "ytdl-core": "^4.11.5",
+    "@netlify/functions": "^2.0.0"
+  },
+  "scripts": {
+    "build": "echo 'No build required'"
+  }
+}
