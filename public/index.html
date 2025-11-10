@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Downloader Pro</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="/css/style.css" rel="stylesheet">
+</head>
+<body>
+    <div class="hero-section">
+        <div class="hero-overlay"></div>
+        <nav class="navbar">
+            <div class="nav-brand">
+                <i class="fas fa-cloud-download-alt"></i>
+                <span>VideoDownPro</span>
+            </div>
+            <div class="nav-links">
+                <a href="#features">Features</a>
+                <a href="#how-it-works">How it Works</a>
+                <a href="#support">Support</a>
+            </div>
+        </nav>
+        
+        <div class="container">
+            <header class="hero-content">
+                <h1 class="glowing-text">Premium Video Downloader</h1>
+                <p class="hero-subtitle">Download High-Quality Videos Up To 4K Resolution</p>
+                <div class="features-list">
+                    <div class="feature-item">
+                        <i class="fas fa-video"></i>
+                        <span>4K Support</span>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-bolt"></i>
+                        <span>Fast Download</span>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-shield-alt"></i>
+                        <span>Secure</span>
+                    </div>
+                </div>
+            </header>
+
+            <div class="url-input-container glassmorphism">
+                <div class="input-wrapper">
+                    <i class="fas fa-link input-icon"></i>
+                    <input type="text" id="videoUrl" placeholder="Paste video URL here..." class="modern-input">
+                </div>
+                <button id="analyzeBtn" class="pulse-button">
+                    <i class="fas fa-search"></i>
+                    Analyze
+                </button>
+            </div>
+
+        <div id="videoInfo" class="hidden">
+            <div class="result-card glassmorphism">
+                <div class="thumbnail-container">
+                    <div class="thumbnail-wrapper">
+                        <img id="thumbnail" src="" alt="Video thumbnail">
+                        <div class="duration-badge" id="videoDuration"></div>
+                    </div>
+                    <div class="video-details">
+                        <h3 id="videoTitle" class="video-title"></h3>
+                        <div class="video-stats">
+                            <span class="quality-badge">Up to 4K</span>
+                            <span class="format-badge">MP4</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="quality-selector">
+                    <h4 class="section-title">
+                        <i class="fas fa-cog"></i>
+                        Select Quality
+                    </h4>
+                    <div id="qualityOptions" class="quality-grid"></div>
+                </div>
+
+                <div class="download-options">
+                    <h4 class="section-title">
+                        <i class="fas fa-download"></i>
+                        Download For
+                    </h4>
+                    <div class="device-buttons">
+                        <button class="device-btn glass-button" data-device="pc">
+                            <i class="fas fa-desktop"></i>
+                            <span>PC Download</span>
+                        </button>
+                        <button class="device-btn glass-button" data-device="mobile">
+                            <i class="fas fa-mobile-alt"></i>
+                            <span>Mobile Download</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="downloadProgress" class="hidden">
+            <div class="download-card glassmorphism">
+                <div class="download-header">
+                    <h4>Downloading...</h4>
+                    <div class="download-stats">
+                        <span id="downloadSpeed">0 MB/s</span>
+                        <span id="timeRemaining">00:00</span>
+                    </div>
+                </div>
+                <div class="progress-container">
+                    <div class="progress-bar">
+                        <div class="progress-fill"></div>
+                    </div>
+                    <div class="progress-text">0%</div>
+                </div>
+                <div class="control-buttons">
+                    <button id="downloadBtn" class="glass-button primary">
+                        <i class="fas fa-download"></i>
+                        <span>Download Now</span>
+                    </button>
+                    <button id="cancelBtn" class="glass-button danger">
+                        <i class="fas fa-times"></i>
+                        <span>Cancel</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <section id="features" class="features-section">
+            <h2 class="section-title">Why Choose Us</h2>
+            <div class="features-grid">
+                <div class="feature-card glassmorphism">
+                    <i class="fas fa-4x fa-tachometer-alt"></i>
+                    <h3>Lightning Fast</h3>
+                    <p>Download videos at maximum speed with our optimized servers</p>
+                </div>
+                <div class="feature-card glassmorphism">
+                    <i class="fas fa-4x fa-quality-high"></i>
+                    <h3>High Quality</h3>
+                    <p>Support for up to 4K resolution and the best available quality</p>
+                </div>
+                <div class="feature-card glassmorphism">
+                    <i class="fas fa-4x fa-lock"></i>
+                    <h3>Secure & Private</h3>
+                    <p>Your downloads are completely secure and private</p>
+                </div>
+                <div class="feature-card glassmorphism">
+                    <i class="fas fa-4x fa-devices"></i>
+                    <h3>Multi-Device</h3>
+                    <p>Download on any device - PC, mobile, or tablet</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>VideoDownPro</h4>
+                <p>The ultimate video downloading solution</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <a href="#features">Features</a>
+                <a href="#how-it-works">How it Works</a>
+                <a href="#support">Support</a>
+            </div>
+            <div class="footer-section">
+                <h4>Connect</h4>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 VideoDownPro. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="/js/main.js"></script>
+</body>
+</html>
